@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+:root {
+  /* Core Brand Palette — Ember & Bean Roastery */
+  --cafe-bg: #120e0c;
+  --cafe-surface: #1b1512;
+  --cafe-surface-2: #241c18;
+  --cafe-border: #362a23;
+  --cafe-accent: #d98a4e;
+  --cafe-accent-hover: #e59c63;
+  --cafe-accent-soft: rgba(217, 138, 78, 0.14);
+  --cafe-cream: #f3ece7;
+  --cafe-muted: #b8a99e;
+  --cafe-terracotta: #a44d34;
+  --cafe-walnut: #3b261d;
+
+  /* Functional & Indian Cafe Dietary Tokens */
+  --cafe-veg: #22c55e;
+  --cafe-nonveg: #ef4444;
+  --cafe-warn: #fbbf24;
+  --cafe-info: #60a5fa;
+}
+
+@theme inline {
+  --color-cafe-bg: var(--cafe-bg);
+  --color-cafe-surface: var(--cafe-surface);
+  --color-cafe-surface-2: var(--cafe-surface-2);
+  --color-cafe-border: var(--cafe-border);
+  --color-cafe-accent: var(--cafe-accent);
+  --color-cafe-accent-hover: var(--cafe-accent-hover);
+  --color-cafe-cream: var(--cafe-cream);
+  --color-cafe-muted: var(--cafe-muted);
+  --color-cafe-terracotta: var(--cafe-terracotta);
+  --color-cafe-walnut: var(--cafe-walnut);
+  --color-cafe-veg: var(--cafe-veg);
+  --color-cafe-nonveg: var(--cafe-nonveg);
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jakarta), system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--cafe-bg);
+  color: var(--cafe-cream);
+}
+
+body {
+  background-color: var(--cafe-bg);
+  color: var(--cafe-cream);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Warm Glassmorphism Utility */
+.cafe-glass {
+  background: rgba(27, 21, 18, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(217, 138, 78, 0.16);
+}
+
+/* Warm Pendant Ambient Glow */
+.cafe-glow {
+  background: radial-gradient(
+    ellipse at 50% 35%,
+    rgba(217, 138, 78, 0.18) 0%,
+    rgba(164, 77, 52, 0.08) 40%,
+    rgba(18, 14, 12, 0) 75%
+  );
+}
+
+/* Custom Subtle Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cafe-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cafe-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cafe-accent);
+}
